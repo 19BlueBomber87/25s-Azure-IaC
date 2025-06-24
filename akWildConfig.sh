@@ -13,4 +13,4 @@ sudo add-apt-repository multiverse
 sudo apt-get install -y nginx
 
 # Set the home page.
-sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/akWildConfig.sh -o /var/www/html/index.html
+#sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/akWildConfig.sh -o /var/www/html/index.html
