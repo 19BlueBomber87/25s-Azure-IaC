@@ -13,4 +13,4 @@ sudo add-apt-repository multiverse
 sudo apt-get install -y nginx
 
 # Set the home page.
-https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/azurehome.html -o /var/www/html/index.html
+sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/azurehome.html -o /var/www/html/index.html
