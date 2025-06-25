@@ -17,5 +17,5 @@ sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/he
 
 host=$(hostname)
 sed -i "s/Custom Heading Size and Font Type/Welcome to Azure!! Computer Name is-> $host/g" /var/www/html/index.html
-sudo touch /var/www/html/jpg
+sudo mkdir /var/www/html/jpg
 sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/AquaMoose.JPG" -o /var/www/html/jpg/AquaMoose.jpg
