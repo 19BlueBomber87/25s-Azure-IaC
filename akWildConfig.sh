@@ -14,7 +14,8 @@ sudo apt-get install -y nginx
 
 # Set the home page.
 sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/azurehome.html -o /var/www/html/index.html
-sudo curl https://github.com/19BlueBomber87/toDoApp/blob/master/jpg/AquaMoose.JPG?raw=true -o /var/www/html/jpg/AquaMoose.jpg
 
 host=$(hostname)
 sed -i "s/Custom Heading Size and Font Type/Welcome to Azure!! Computer Name is-> $host/g" /var/www/html/index.html
+
+curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/AquaMoose.JPG" -o /var/www/html/jpg/AquaMoose.jpg
