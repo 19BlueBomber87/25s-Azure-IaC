@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Update apt cache.
 sudo apt-get update
 
@@ -14,8 +16,13 @@ sudo apt-get install -y nginx
 sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/azurehome.html -o /var/www/html/index.html
 
 host=$(hostname)
+sed -i "s/Custom Heading Size and Font Type/Welcome to Azure!!<br>Computer Name is-> $host/g" /var/www/html/index.html
+
+
+
+host=$(hostname)
 opsys=$(uname -a)
-sudo sed -i "s/Custom Heading Size and Font Type/Welcome to Azure!!<br>Computer Name is-> <br>$host<br>$opsys/g" /var/www/html/index.html
+
 
 sudo mkdir /var/www/html/jpg
 
