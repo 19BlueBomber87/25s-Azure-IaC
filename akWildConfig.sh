@@ -20,7 +20,7 @@ sed -i "s/It uses CSS to set the color, the size and align the text to the left/
 
 sudo mkdir /var/www/html/jpg
 
-sudo curl "https://github.com/19BlueBomber87/25s-Azure-IaC/blob/main/html/cert.jpg" -o /var/www/html/jpg/cert.jpg
+sudo curl "https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/cert.jpg" -o /var/www/html/jpg/cert.jpg
 sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/AquaMoose.jpg" -o /var/www/html/jpg/AquaMoose.jpg
 sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/babymoose2.jpg" -o /var/www/html/jpg/babymoose2.jpg
 sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/bull.jpg" -o /var/www/html/jpg/bull.jpg
