@@ -13,9 +13,10 @@ sudo apt-get install -y nginx
 # Set the home page.
 sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/azurehome.html -o /var/www/html/index.html
 
-#get computer name and add it to home page
 host=$(hostname)
+opsys=$(uname -a)
 sed -i "s/Custom Heading Size and Font Type/Welcome to Azure!! Computer Name is-> $host/g" /var/www/html/index.html
+sed -i "s/It uses CSS to set the color, the size and align the text to the left/$opsys/g" /var/www/html/index.html
 
 sudo mkdir /var/www/html/jpg
 
