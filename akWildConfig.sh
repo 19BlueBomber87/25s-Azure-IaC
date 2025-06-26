@@ -16,7 +16,7 @@ sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/he
 host=$(hostname)
 opsys=$(uname -a)
 sed -i "s/Custom Heading Size and Font Type/Welcome to Azure!!<br>Computer Name is-> $host/g" /var/www/html/index.html
-sed -i "s/This is heading 1. It uses CSS to set the color, the size and align the text to the left/$opsys/g" /var/www/html/index.html
+sed -i "s/This is heading 1/$opsys/g" /var/www/html/index.html
 
 sudo mkdir /var/www/html/jpg
 
