@@ -15,7 +15,7 @@ sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/he
 
 host=$(hostname)
 opsys=$(uname -a)
-sed -i "s/Custom Heading Size and Font Type/Welcome to Azure!!<br>Computer Name is-> $host<br>$opsys/g" /var/www/html/index.html
+sudo sed -i "s/Custom Heading Size and Font Type/Welcome to Azure!!<br>Computer Name is-> <br>$host<br>$opsys/g" /var/www/html/index.html
 
 sudo mkdir /var/www/html/jpg
 
