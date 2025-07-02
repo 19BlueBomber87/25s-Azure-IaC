@@ -1,0 +1,1 @@
+Install-WindowsFeature -Name Web-Sever -IncludeAllSubFeature -IncludeManagementTools -Verbose *>&1
