@@ -15,10 +15,8 @@ sudo apt-get install -y powershell
 
 #create powershell script
 sudo mkdir /usr/share/pwsh7scripts
-
 sudo echo "Install-Module Cim -force -verbose *>&1" | sudo tee /usr/share/pwsh7scripts/yahoo.ps1
 sudo echo "Install-Module -Name CYB3RTools -force -verbose *>&1" | sudo tee --append /usr/share/pwsh7scripts/yahoo.ps1
-
 sudo echo "Write-Verbose -Message "$(uname -a)+ $(Get-Date)" -Verbose *>&1" | sudo tee /usr/share/pwsh7scripts/ComputerNameAndDate.ps1
 
 #Execute Script
