@@ -6,15 +6,12 @@ sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/ka
 # Update apt cache.
 sudo apt-get update
 
-
 #pen tools
 sudo apt-get install -y nmap
 sudo apt-get install -y wireshark
 
 #install Powershell
 sudo apt-get install -y powershell
-
-
 
 #create powershell script
 sudo echo "Install-Module Cim -verbose *>&1" | sudo tee yahoo.ps1
