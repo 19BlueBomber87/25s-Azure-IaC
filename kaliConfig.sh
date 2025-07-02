@@ -8,8 +8,8 @@ sudo apt-get update
 
 
 #pen tools
-sudo apt install nmap
-sudo apt install wireshark
+sudo apt-get install -y nmap
+sudo apt-get install -y wireshark
 
 #install Powershell
 sudo apt-get install -y powershell
