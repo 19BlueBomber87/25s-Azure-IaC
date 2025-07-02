@@ -20,4 +20,4 @@ sudo echo "Install-Module -Name CYB3RTools -force -verbose *>&1" | sudo tee --ap
 sudo echo "Write-Verbose -Message "$(uname -a)+ $(Get-Date)" -Verbose *>&1" | sudo tee /usr/share/pwsh7scripts/ComputerNameAndDate.ps1
 
 #Execute Script
-pwsh ./usr/share/pwsh7scripts/yahoo.ps1
+sudo pwsh ./usr/share/pwsh7scripts/yahoo.ps1
