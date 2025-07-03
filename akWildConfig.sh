@@ -15,14 +15,17 @@ sudo apt-get install -y nginx
 # Set the home page.
 sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/azurehome.html -o /var/www/html/index.html
 
-
+#Define characters
 host=$(hostname)
 opsys=$(uname -snm)
 ip_address=$(ip a | grep 'inet ' | awk '{print $2}')
 host=$(hostname)
 today=$(date +%m-%d-%Y)
-printIPvar=$(echo $ip_address)
-sudo sed -i "s/Custom Heading Size and Font Type/Welcome to Azure!!<br>Computer Name is-> $host<br>$opsys<br>$today<br>$ip_address/g" /var/www/html/index.html
+
+#Fix illegal characters
+printIPvar=$(echo $ip_address | tr '/', '-')
+
+sudo sed -i "s/Custom Heading Size and Font Type/Welcome to Azure <br>Computer Name is-> $host<br>$opsys<br>$today<br>$printIPvar/g" /var/www/html/index.html
 
 sudo mkdir /var/www/html/jpg
 
