@@ -17,8 +17,8 @@ sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/he
 
 
 host=$(hostname)
-opsys=$(uname -snmr)
-ip_address=$(ip a | grep 'inet ' | awk '{print $2}')
+opsys=$(uname -snm)
+ip_address=$(ifconfig | grep 'inet ' | awk '{print $2}')
 host=$(hostname)
 today=$(date +%m-%d-%Y)
 printIPvar=$(echo $ip_address)
