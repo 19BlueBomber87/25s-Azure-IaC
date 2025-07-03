@@ -9,6 +9,7 @@ sudo apt-get update
 #pen tools
 sudo apt-get install -y nmap
 sudo apt-get install -y wireshark
+sudo apt-get install -y tshark
 
 #install Powershell
 sudo apt-get install -y powershell
