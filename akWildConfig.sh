@@ -22,7 +22,7 @@ ip_address=$(ifconfig | grep 'inet ' | awk '{print $2}')
 host=$(hostname)
 today=$(date +%m-%d-%Y)
 printIPvar=$(echo $ip_address)
-sed -i "s/Custom Heading Size and Font Type/Welcome to Azure!!<br>Computer Name is-> $host<br>$opsys<br>$today<br>$ip_address/g" /var/www/html/index.html
+sed -i "s/Custom Heading Size and Font Type/Welcome to Azure!!<br>Computer Name is-> $host<br>$opsys<br>$today<br>$printIPvar/g" /var/www/html/index.html
 
 sudo mkdir /var/www/html/jpg
 
