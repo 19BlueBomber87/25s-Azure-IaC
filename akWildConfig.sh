@@ -19,7 +19,7 @@ sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/he
 host=$(hostname)
 opsys=$(uname -v)
 ip_address=$(ip a | grep 'inet ' | awk '{print $2}')
-$cpu=$(lscpu | grep 'Model name')
+cpu=$(lscpu | grep 'Model name')
 host=$(hostname)
 
 today=$(date +%m-%d-%Y)
