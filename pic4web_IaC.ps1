@@ -11,4 +11,4 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/19BlueBomber87/toDoApp
 
 #add computer info to web site
 $html = Get-Content C:\\inetpub\\wwwroot\\Default.htm
-$html.replace("Custom Heading Size and Font Type","Welcome to Azure`nComputer Name: $ENV:COMPUTERNAME`nOS Version: $($(Get-WmiObject win32_operatingsystem).caption)")`nDate: $(Get-Date)`nIP: $([System.Net.Dns]::GetHostAddresses($ENV:COMPUTERNAME)) | Out-File C:\\inetpub\\wwwroot\\Default.htm
+$html.replace("Custom Heading Size and Font Type","Welcome to Azure`nComputer Name: $ENV:COMPUTERNAME`nOS Version: $($(Get-WmiObject win32_operatingsystem).caption)")`nDate: $(Get-Date)`n$(Get-CimInstance -ClassName Win32_Processor | Select-Object -ExpandProperty Name)`nIP: $([System.Net.Dns]::GetHostAddresses($ENV:COMPUTERNAME)) | Out-File C:\\inetpub\\wwwroot\\Default.htm
