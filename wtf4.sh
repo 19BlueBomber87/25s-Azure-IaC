@@ -9,4 +9,4 @@ host=$(hostname)
 today=$(date +%m-%d-%Y)
 #Fix illegal characters
 printIPvar=$(echo $ip_address | tr '/', '-')
-echo "Welcome to Azure <br>Computer Name: $host<br>OS Version: $opsys<br>Date: $today<br>CPU:cpu<br>IP: $printIPvar"
+echo "Welcome to Azure <br>Computer Name: $host<br>OS Version: $opsys<br>Date: $today<br>CPU:$cpu<br>IP: $printIPvar"
