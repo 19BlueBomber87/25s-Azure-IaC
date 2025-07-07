@@ -40,4 +40,4 @@ today=$(date +%m-%d-%Y)
 printIPvar=$(echo $ip_address | tr '/', '-')
 
 #update web page
-sudo sed -i "s/Custom Heading Size and Font Type/wtf/g" /var/www/html/index.html
+sudo sed -i "s/Custom Heading Size and Font Type/$host/g" /var/www/html/index.html
