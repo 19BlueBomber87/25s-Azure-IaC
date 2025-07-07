@@ -32,7 +32,7 @@ host=$(hostname)
 opsys=$(uname -v)
 ip_address=$(ip a | grep 'inet ' | awk '{print $2}')
 host=$(hostname)
-
+cpu=$(lscpu | grep 'Model name' | awk '{print $5}')
 today=$(date +%m-%d-%Y)
 
 #Fix illegal characters
