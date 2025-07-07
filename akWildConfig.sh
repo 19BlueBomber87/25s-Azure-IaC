@@ -16,5 +16,5 @@ sudo apt-get install -y sed
 sudo apt-get install -y nginx
 
 #Download and run HTML web config script
-sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/webpageconfig.sh /var/www/html/webpageconfig.sh
+sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/webpageconfig.sh -o /var/www/html/webpageconfig.sh
 sudo bash /var/www/html/webpageconfig.sh
