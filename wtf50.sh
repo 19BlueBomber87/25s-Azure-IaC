@@ -1,5 +1,2 @@
 #!/bin/bash
-
-# Update apt cache.
-apt-get update
-
+sudo apt-get update
