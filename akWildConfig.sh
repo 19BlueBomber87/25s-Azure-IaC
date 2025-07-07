@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update apt cache.
-sudo apt-get update
+sudo apt-get -y update
 
 #We need to add repo before installing nginx-core. Otherwise we get an error
 sudo add-apt-repository -y main
