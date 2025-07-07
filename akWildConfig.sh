@@ -9,6 +9,9 @@ sudo add-apt-repository -y universe
 sudo add-apt-repository -y restricted
 sudo add-apt-repository -y multiverse  
 
+#Update Sed
+sudo apt-get install -y sed
+
 # Install Nginx.
 sudo apt-get install -y nginx
 
@@ -37,4 +40,4 @@ today=$(date +%m-%d-%Y)
 printIPvar=$(echo $ip_address | tr '/', '-')
 
 #update web page
-sudo sed -i "s//Custom Heading Size and Font Type//Welcome to Azure <br>Computer Name: $host<br>OS Version: $opsys<br>Date: $today<br>CPU:$cpu<br>IP: $printIPvar//g" /var/www/html/index.html
+sudo sed -i "s/Custom Heading Size and Font Type/Welcome to Azure <br>Computer Name: $host<br>OS Version: $opsys<br>Date: $today<br>CPU:$cpu<br>IP: $printIPvar/g" /var/www/html/index.html
