@@ -37,7 +37,7 @@ host=$(hostname)
 today=$(date +%m-%d-%Y)
 
 #Fix illegal characters
-printIPvar=$(echo $ip_address | tr '/', '-')
-
+printIPvar=$(sudo echo $ip_address | tr '/', '-')
+mainSTR=$(sudo echo "Custom Heading Size and Font Type/Welcome to Azure <br>Computer Name: $host<br>OS Version: $opsys<br>Date: $today<br>CPU:$cpu<br>IP: $printIPvar")
 #update web page
-sudo sed -i "s/Custom Heading Size and Font Type/Welcome to Azure <br>Computer Name: $host<br>OS Version: $opsys<br>Date: $today<br>CPU:<br>IP: $printIPvar/g" /var/www/html/index.html
+sudo sed -i "s/$mainSTR/g" /var/www/html/index.html
