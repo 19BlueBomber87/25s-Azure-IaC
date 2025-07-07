@@ -31,7 +31,7 @@ sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/m
 host=$(hostname)
 opsys=$(uname -v)
 ip_address=$(ip a | grep 'inet ' | awk '{print $2}')
-cpu=$(lscpu | grep 'Model name')
+cpu=$(lscpu | grep 'Model name' | awk '{print $3, $4,$5,$6,$7, $8, $9}')
 host=$(hostname)
 
 today=$(date +%m-%d-%Y)
