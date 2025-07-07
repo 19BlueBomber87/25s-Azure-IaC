@@ -10,13 +10,10 @@ sudo add-apt-repository -y restricted
 sudo add-apt-repository -y multiverse  
 
 #Update Sed
-sudo apt-get install -y sed
+sudo apt-get upgrade -y sed
 
 # Install Nginx.
 sudo apt-get install -y nginx
-
-#Download and run HTML web config script
-sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/webpageconfig.sh -o '/var/www/html/webpageconfig.sh'
 
 # Set the web page.
 sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/azurehome.html -o '/var/www/html/index.html'
