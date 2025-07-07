@@ -16,19 +16,19 @@ sudo apt-get install -y sed
 sudo apt-get install -y nginx
 
 #Download and run HTML web config script
-sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/webpageconfig.sh -o /var/www/html/webpageconfig.sh
+sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/webpageconfig.sh -o '/var/www/html/webpageconfig.sh'
 
 # Set the web page.
-sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/azurehome.html -o /var/www/html/index.html
+sudo curl https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/azurehome.html -o '/var/www/html/index.html'
 
 sudo mkdir /var/www/html/jpg
 
-sudo curl "https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/cert.jpg" -o /var/www/html/jpg/cert.jpg
-sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/AquaMoose.jpg" -o /var/www/html/jpg/AquaMoose.jpg
-sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/babymoose2.jpg" -o /var/www/html/jpg/babymoose2.jpg
-sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/bull.jpg" -o /var/www/html/jpg/bull.jpg
-sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/bunny.jpg" -o /var/www/html/jpg/bunny.jpg
-sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/bunny2.jpg" -o /var/www/html/jpg/bunny2.jpg
+sudo curl "https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/cert.jpg" -o '/var/www/html/jpg/cert.jpg'
+sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/AquaMoose.jpg" -o '/var/www/html/jpg/AquaMoose.jpg'
+sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/babymoose2.jpg" -o '/var/www/html/jpg/babymoose2.jpg'
+sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/bull.jpg" -o '/var/www/html/jpg/bull.jpg'
+sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/bunny.jpg" -o '/var/www/html/jpg/bunny.jpg'
+sudo curl "https://raw.githubusercontent.com/19BlueBomber87/toDoApp/refs/heads/master/jpg/bunny2.jpg" -o '/var/www/html/jpg/bunny2.jpg'
 
 #Define characters
 host=$(hostname)
