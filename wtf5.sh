@@ -4,7 +4,7 @@ sudo echo 'Model name: Intel(R) Xeon(R) Platinum 8171M CPU @ 2.60GHz'
 host=$(hostname)
 opsys=$(uname -v)
 ip_address=$(ip a | grep 'inet ' | awk '{print $2}')
-cpu=$(lscpu | grep 'Model name') | awk '{print $3, $4,$5,$6,$7, $8, $9}'
+cpu=$(lscpu | grep 'Model name' | awk '{print $3, $4,$5,$6,$7, $8, $9}')
 host=$(hostname)
 today=$(date +%m-%d-%Y)
 #Fix illegal characters
