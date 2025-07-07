@@ -32,11 +32,12 @@ host=$(hostname)
 opsys=$(uname -v)
 ip_address=$(ip a | grep 'inet ' | awk '{print $2}')
 host=$(hostname)
-cpu=$(sudo echo $(lscpu | grep 'Model name' | awk '{print $3,$4,$5,$6,$7,$8,$9}'))
+cpu=$(lscpu | grep 'Model name' | awk '{print $3,$4,$5,$6,$7,$8,$9}'))
+cpuString= sudo echo $cpu
 today=$(date +%m-%d-%Y)
 
 #Fix illegal characters
 printIPvar=$(sudo echo $ip_address | tr '/', '-')
 mainSTR=$(sudo echo "Welcome to Azure <br>Computer Name: $host<br>OS Version: $opsys<br>Date: $today<br>CPU: $cpu<br>IP: $printIPvar")
 #update web page
-sudo sed -i "s/Custom Heading Size and Font Type/Welcome to Azure <br>Computer Name: $host<br>OS Version: $opsys<br>Date: $today<br>CPU: $cpu<br>IP: $printIPvar/g" /var/www/html/index.html
+sudo sed -i "s/Custom Heading Size and Font Type/Welcome to Azure <br>Computer Name: $host<br>OS Version: $opsys<br>Date: $today<br>CPU: $cpuStrin <br>IP: $printIPvar/g" /var/www/html/index.html
