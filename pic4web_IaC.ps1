@@ -1,3 +1,6 @@
+#Download html code for webpage
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/azurehome.html -OutFile C:\\inetpub\\wwwroot\\Default.htm
+
 #HTML page pic directory
 mkdir C:\\inetpub\\wwwroot\\jpg
 
