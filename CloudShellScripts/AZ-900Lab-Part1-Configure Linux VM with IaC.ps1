@@ -1,8 +1,4 @@
 # https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/9-exercise-configure-network-access
-# az vm list
-# az vm list-ip-addresses
-# az group list --output table
-# az group list --query '[].{Name:name}' -o table   
 # https://az-vm-image.info/
 #################################################
 #1 - Configure Linux VM with IaC
