@@ -60,4 +60,9 @@ az ssh vm --resource-group yahoo --vm-name Kali --local-user funduser01
 
 az vm extension set --resource-group yahoo --vm-name kali --name customScript --publisher Microsoft.Azure.Extensions --version 2.1   --settings '{"fileUris":["https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/kaliConfig.sh"]}' --protected-settings '{"commandToExecute": "./kaliConfig.sh"}'
 
+#List VMs and Groups in a table format
+az vm list
+az vm list-ip-addresses
+az group list --output table
+az group list --query '[].{Name:name}' -o table   
 #END
