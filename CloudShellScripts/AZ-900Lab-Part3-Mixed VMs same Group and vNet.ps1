@@ -74,7 +74,7 @@ if($vmName -eq "kali-01"){
 if($vmName -eq "win2019-01"){
     Write-Verbose -Message "Windows Server VM found!  Configuring IIS <@:D" -Verbose *>&1
     az network nsg rule create --resource-group $ResourceGroupMixedVm --nsg-name $vmNSG --name allow-http --protocol tcp --priority 111 --destination-port-range 80 --access Allow
-    Set-AzVMExtension -ResourceGroupName $ResourceGroupMixedVm -ExtensionName "IIS" -VMName $vmName -Location "WestUS2" -Publisher Microsoft.Compute -ExtensionType CustomScriptExtension -TypeHandlerVersion 1.8 -SettingString '{"commandToExecute":"powershell Install-WindowsFeature Web-Server -IncludeManagementTools;Invoke-WebRequest -Uri https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/html/azurehome.html -OutFile C:\\inetpub\\wwwroot\\Default.htm;mkdir C:\\temp\\;Invoke-WebRequest -Uri https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/pic4web_IaC.ps1 -OutFile C:\\temp\\yahoo.ps1;C:\\temp\\yahoo.ps1 "}' -Verbose *>&1
+    Set-AzVMExtension -ResourceGroupName $ResourceGroupMixedVm -ExtensionName "IIS" -VMName $vmName -Location "WestUS2" -Publisher Microsoft.Compute -ExtensionType CustomScriptExtension -TypeHandlerVersion 1.8 -SettingString '{"commandToExecute":"powershell Install-WindowsFeature Web-Server -IncludeManagementTools;mkdir C:\\temp\\;Invoke-WebRequest -Uri https://raw.githubusercontent.com/19BlueBomber87/25s-Azure-IaC/refs/heads/main/pic4web_IaC.ps1 -OutFile C:\\temp\\yahoo.ps1;C:\\temp\\yahoo.ps1 "}' -Verbose *>&1
 }
 
 #verify
