@@ -1,6 +1,7 @@
 ########################################################################
 # Find and Publishers and Test VM Images
 ########################################################################
+# https://az-vm-image.info/
 #Every image, take time to compile
 az vm image list --all --query '[].{urnAlias:urnAlias, Publisher:publisher, Offer:offer, Sku:sku, Urn:urn, Architecture:architecture}' --output table
 az vm image list --all --publisher Canonical  --query '[].{urnAlias:urnAlias, Publisher:publisher, Offer:offer, Sku:sku, Urn:urn, Architecture:architecture}' --output table
