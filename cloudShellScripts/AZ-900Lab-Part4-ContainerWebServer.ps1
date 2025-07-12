@@ -4,7 +4,7 @@
 
 #docker VM
 az group create -n dockerHostGroup -l WestUS2
-az vm create --resource-group dockerHostGroup --name dockerHost --public-ip-sku Standard --image "Win2022Datacenter" --vnet-address-prefix 10.70.70.0/16 --subnet-address-prefix 10.70.70.0/24  --admin-username admin01 --admin-password "P@ssw0rd2025!" --size 'Standard_D2s_v3'--generate-ssh-keys  --accept-term 
+az vm create --resource-group dockerHostGroup --name dockerHost --public-ip-sku Standard --image "Win2022Datacenter" --vnet-address-prefix 10.70.70.0/16 --subnet-address-prefix 10.70.70.0/24  --admin-username admin01 --admin-password "P@ssw0rd2025!" --size 'Standard_D2s_v3' --generate-ssh-keys  --accept-term 
 Set-AzVMExtension -ResourceGroupName dockerHostGroup -ExtensionName "docker" -VMName dockerHost -Location "WestUS2" -Publisher Microsoft.Compute -ExtensionType CustomScriptExtension -TypeHandlerVersion 1.8 -SettingString '{"commandToExecute":"powershell Install-WindowsFeature Hyper-V -IncludeManagementTools;Install-WindowsFeature Containers;shutdown /r /f /t 0"}' -Verbose *>&1
 
 # The following SKU Family VMs are some of the sizes capable of nested virtualization. These SKUs are hyper-threaded, nested capable VMs--> as of 2025
