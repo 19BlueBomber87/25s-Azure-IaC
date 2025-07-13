@@ -13,6 +13,7 @@ https://youtu.be/1VOTgTrGXME
 
 [25s-Azue-IaC][Lab04]
 https://youtu.be/mEJp6S2Zn3Q
+In this video, I walk you through Lab 4, which focuses on using Docker containers to host a web server. We set up a virtual machine, install the Docker runtime, and create multiple instances of a Windows Server 2022 Core containers to run our web pages. I demonstrate how to install the necessary features, commit changes to create new images, and efficiently deploy ten containers. I encourage you to follow along and replicate the steps to gain hands-on experience with containers.
 
 [25s-Azue-IaC][Peerings]
 https://youtu.be/vC7Xdcj86Rk
