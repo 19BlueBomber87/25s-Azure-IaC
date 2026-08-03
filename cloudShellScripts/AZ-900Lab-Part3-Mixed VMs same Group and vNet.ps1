@@ -14,7 +14,7 @@ az group create -n $ResourceGroupMixedVm -l "WestUS2"
 #Create network
 $networkname = "MixedVmVnet"
 $subnetname = "MixedVMSubnet"
-az network vnet create -g $ResourceGroupMixedVm -n $networkname  --address-prefix 172.4.0.0/16 --subnet-name $subnetname --subnet-prefixes 172.4.0.0/24
+az network vnet create -g $ResourceGroupMixedVm -n $networkname  --address-prefix 172.17.0.0/16 --subnet-name $subnetname --subnet-prefixes 172.17.0.0/24
 
 #Define variables
 $image1 = "Win2019Datacenter"
