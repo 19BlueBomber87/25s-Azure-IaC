@@ -27,12 +27,11 @@ az vm image list --publisher MicrosoftWindowsServer --query '[].{urnAlias:urnAli
 #find Publishers
 az vm image list-publishers -l westus2 --query 'sort_by([].{Name:name}, &Name)' -o table | more
 
-#find images by publishers
 az vm image list-publishers -l westus2 --query "[?contains(name,'kali')].{Name: name}" -o table
 az vm image list-publishers -l westus2 --query "[?contains(name,'SUSE')].{Name: name}" -o table
 az vm image list-publishers -l westus2 --query "[?contains(name,'Windows')].{Name: name}" -o table
 
-#returns all, takes a few moments to run
+#returns all images, takes a few moments to run
 az vm image list --all --query '[].{urnAlias:urnAlias, Publisher:publisher, Offer:offer, Sku:sku, Urn:urn, Architecture:architecture}' --output table
 
 #list all images by MicrosoftWindowsServer
